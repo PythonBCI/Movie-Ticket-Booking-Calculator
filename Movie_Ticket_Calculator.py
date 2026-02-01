@@ -23,11 +23,16 @@ else:
 print('Discount:', discount)
 
 extra_charges = 0
-
-
 if is_weekend or show_time == 'Evening':
     extra_charges = 2
     print('Extra charges will be applied')
 else:
-    print("No extra charges will be applied")
-print("Extra charges:", extra_charges)
+    print('No extra charges will be applied')
+print('Extra charges:', extra_charges)
+
+if age >= 21 or age >= 18 and (show_time != 'Evening' or is_member):
+    print('Ticket booking condition satisfied')
+
+    
+else:
+    print('Ticket booking failed due to restrictions')
